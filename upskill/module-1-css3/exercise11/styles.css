@@ -1,0 +1,61 @@
+body {
+
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+
+    background-color: #f5f5f5;
+}
+
+header {
+
+    background-color: #007BFF;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 20px;
+}
+
+.container {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    padding: 20px;
+}
+
+.card {
+
+    width: 300px;
+
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 0 10px gray;
+}
+
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+
+    .container {
+
+        flex-direction: column;
+
+        align-items: center;
+    }
+
+    .card {
+
+        width: 90%;
+    }
+}

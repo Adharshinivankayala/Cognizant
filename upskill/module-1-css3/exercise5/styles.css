@@ -1,0 +1,85 @@
+/* Apply Google Font */
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+    background-color: #f5f5f5;
+
+    margin: 0;
+
+    padding: 20px;
+}
+
+
+/* Header Styles */
+
+.header {
+    text-align: center;
+}
+
+.header h1 {
+
+    font-size: 40px;
+
+    font-weight: 700;
+
+    font-style: italic;
+
+    color: #007BFF;
+
+    text-transform: uppercase;
+
+    letter-spacing: 3px;
+}
+
+
+/* Event Section */
+
+.event {
+
+    background-color: white;
+
+    padding: 20px;
+
+    margin: 20px auto;
+
+    width: 80%;
+
+    border-radius: 10px;
+}
+
+
+/* Event Title */
+
+.event h2 {
+
+    font-size: 28px;
+
+    font-weight: 600;
+
+    color: #333;
+
+    text-align: left;
+}
+
+
+/* Description Text */
+
+.description {
+
+    font-size: 18px;
+
+    font-weight: 400;
+
+    font-style: normal;
+
+    color: #555;
+
+    text-align: justify;
+
+    text-transform: none;
+
+    letter-spacing: 1px;
+
+    line-height: 1.8;
+}

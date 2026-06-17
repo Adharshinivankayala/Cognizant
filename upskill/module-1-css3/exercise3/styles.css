@@ -1,0 +1,46 @@
+/* Universal Selector */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ID Selector */
+
+#mainHeader {
+    background-color: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+
+/* Element Selector */
+
+h2 {
+    color: #333;
+    text-align: center;
+    margin: 20px;
+}
+
+
+/* Class Selector */
+
+.eventCard {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f5f5f5;
+}
+
+
+/* Grouping Selector */
+
+h3, p {
+    color: #555;
+    margin: 10px 0;
+}
