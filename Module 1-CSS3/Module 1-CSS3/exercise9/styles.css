@@ -1,0 +1,49 @@
+/* General Styling */
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    margin: 30px;
+
+    background-color: #f5f5f5;
+}
+
+
+/* Heading Styling */
+
+h1 {
+
+    text-align: center;
+
+    color: #007BFF;
+}
+
+h2 {
+
+    color: #333;
+
+    margin-bottom: 20px;
+}
+
+
+/* Multi-column News Article */
+
+.news-article {
+
+    background-color: white;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    line-height: 1.8;
+
+    text-align: justify;
+
+    column-count: 2;
+
+    column-gap: 30px;
+
+    column-rule: 1px solid gray;
+}
