@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Event Registration Form</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background-color: #f2f2f2;
+        }
+
+        .container {
+
+            width: 400px;
+
+            margin: 50px auto;
+
+            background-color: white;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+
+            text-align: center;
+
+            color: #007BFF;
+        }
+
+        label {
+
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+
+            width: 100%;
+
+            padding: 10px;
+
+            margin-top: 5px;
+
+            margin-bottom: 15px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 5px;
+        }
+
+        button {
+
+            width: 100%;
+
+            padding: 10px;
+
+            background-color: #007BFF;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+
+            background-color: #0056b3;
+        }
+
+        output {
+
+            display: block;
+
+            margin-top: 20px;
+
+            color: green;
+
+            font-weight: bold;
+
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Event Registration</h1>
+
+        <form
+        onsubmit="document.getElementById('msg').value='Registration Successful!'; return false;">
+
+            <label>Name</label>
+
+            <input
+            type="text"
+
+            placeholder="Enter your name"
+
+            required
+
+            autofocus>
+
+
+            <label>Email</label>
+
+            <input
+            type="email"
+
+            placeholder="Enter your email"
+
+            required>
+
+
+            <label>Date</label>
+
+            <input
+            type="date"
+
+            required>
+
+
+            <label>Event Type</label>
+
+            <select required>
+
+                <option value="">Select Event</option>
+
+                <option>Music Festival</option>
+
+                <option>Food Fair</option>
+
+                <option>Art Exhibition</option>
+
+                <option>Community Meeting</option>
+
+            </select>
+
+
+            <label>Message</label>
+
+            <textarea
+
+            rows="4"
+
+            placeholder="Enter your message"
+
+            required>
+
+            </textarea>
+
+
+            <button type="submit">
+
+                Register
+
+            </button>
+
+
+            <output id="msg"></output>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

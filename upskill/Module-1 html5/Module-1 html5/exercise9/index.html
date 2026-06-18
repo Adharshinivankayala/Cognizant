@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Geolocation for Event Mapping</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background-color: #f2f2f2;
+
+            text-align: center;
+        }
+
+        .container {
+
+            width: 500px;
+
+            margin: 50px auto;
+
+            background-color: white;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+
+            color: #007BFF;
+        }
+
+        button {
+
+            padding: 12px 20px;
+
+            background-color: #007BFF;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+            font-size: 16px;
+        }
+
+        button:hover {
+
+            background-color: #0056b3;
+        }
+
+        #output {
+
+            margin-top: 20px;
+
+            font-size: 18px;
+
+            color: green;
+
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Find Nearby Events</h1>
+
+    <button onclick="findLocation()">
+
+        Find Nearby Events
+
+    </button>
+
+    <p id="output"></p>
+
+</div>
+
+
+<script>
+
+function findLocation() {
+
+    if(navigator.geolocation) {
+
+        navigator.geolocation.getCurrentPosition(
+
+            showPosition,
+
+            showError,
+
+            {
+
+                enableHighAccuracy: true,
+
+                timeout: 10000,
+
+                maximumAge: 0
+
+            }
+
+        );
+
+    }
+
+    else {
+
+        document.getElementById("output").innerHTML =
+
+        "Geolocation is not supported by this browser.";
+    }
+}
+
+
+
+function showPosition(position) {
+
+    document.getElementById("output").innerHTML =
+
+    "Latitude : " +
+
+    position.coords.latitude +
+
+    "<br><br>" +
+
+    "Longitude : " +
+
+    position.coords.longitude;
+}
+
+
+
+function showError(error) {
+
+    switch(error.code) {
+
+        case error.PERMISSION_DENIED:
+
+            document.getElementById("output").innerHTML =
+
+            "User denied the location request.";
+
+            break;
+
+
+        case error.POSITION_UNAVAILABLE:
+
+            document.getElementById("output").innerHTML =
+
+            "Location information unavailable.";
+
+            break;
+
+
+        case error.TIMEOUT:
+
+            document.getElementById("output").innerHTML =
+
+            "Request timed out.";
+
+            break;
+
+
+        default:
+
+            document.getElementById("output").innerHTML =
+
+            "An unknown error occurred.";
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>

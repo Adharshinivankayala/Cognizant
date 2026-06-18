@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Debugging with Chrome DevTools</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background-color: #f2f2f2;
+
+            text-align: center;
+        }
+
+        .container {
+
+            width: 400px;
+
+            margin: 50px auto;
+
+            background-color: white;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 0 10px gray;
+        }
+
+        button {
+
+            padding: 10px 20px;
+
+            background-color: #007BFF;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+        }
+
+        button:hover {
+
+            background-color: #0056b3;
+        }
+
+        #result {
+
+            margin-top: 20px;
+
+            color: green;
+
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Chrome DevTools Demo</h1>
+
+    <input
+
+    type="number"
+
+    id="num1"
+
+    placeholder="Enter First Number">
+
+    <br><br>
+
+    <input
+
+    type="number"
+
+    id="num2"
+
+    placeholder="Enter Second Number">
+
+    <br><br>
+
+    <button onclick="addNumbers()">
+
+        Add Numbers
+
+    </button>
+
+    <p id="result"></p>
+
+</div>
+
+
+<script>
+
+function addNumbers() {
+
+    let a = parseInt(
+
+        document.getElementById("num1").value
+
+    );
+
+    let b = parseInt(
+
+        document.getElementById("num2").value
+
+    );
+
+    console.log("First Number :", a);
+
+    console.log("Second Number :", b);
+
+    let sum = a + b;
+
+    console.log("Sum :", sum);
+
+    document.getElementById("result").innerHTML =
+
+    "Result = " + sum;
+}
+
+</script>
+
+</body>
+
+</html>

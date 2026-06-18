@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Event Feedback</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background-color: #f2f2f2;
+        }
+
+        .container {
+
+            width: 500px;
+
+            margin: 40px auto;
+
+            background-color: white;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 0 10px gray;
+        }
+
+        h1 {
+
+            text-align: center;
+
+            color: #007BFF;
+        }
+
+        label {
+
+            font-weight: bold;
+        }
+
+        input,
+        select,
+        textarea {
+
+            width: 100%;
+
+            padding: 10px;
+
+            margin-top: 5px;
+
+            margin-bottom: 15px;
+
+            border: 1px solid #ccc;
+
+            border-radius: 5px;
+        }
+
+        button {
+
+            width: 100%;
+
+            padding: 10px;
+
+            background-color: #007BFF;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+        }
+
+        img {
+
+            width: 200px;
+
+            height: 150px;
+
+            border: 3px solid blue;
+
+            border-radius: 10px;
+
+            display: block;
+
+            margin: auto;
+        }
+
+        #fee,
+        #phoneMsg,
+        #charCount {
+
+            color: green;
+
+            font-weight: bold;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Event Feedback Form</h1>
+
+    <form>
+
+        <label>Phone Number</label>
+
+        <input
+        type="text"
+
+        id="phone"
+
+        placeholder="Enter 10 digit phone number"
+
+        onblur="validatePhone()">
+
+        <p id="phoneMsg"></p>
+
+
+        <label>Select Event</label>
+
+        <select id="event" onchange="showFee()">
+
+            <option value="">Choose Event</option>
+
+            <option value="500">Music Festival</option>
+
+            <option value="300">Food Fair</option>
+
+            <option value="400">Art Exhibition</option>
+
+        </select>
+
+        <p id="fee"></p>
+
+
+        <label>Feedback</label>
+
+        <textarea
+
+        id="feedback"
+
+        rows="4"
+
+        placeholder="Enter your feedback"
+
+        onkeyup="countCharacters()">
+
+        </textarea>
+
+        <p id="charCount">
+
+            Characters: 0
+
+        </p>
+
+
+        <button
+
+        type="button"
+
+        onclick="submitForm()">
+
+            Submit
+
+        </button>
+
+    </form>
+
+    <br>
+
+    <img
+
+    id="eventImg"
+
+    src="https://picsum.photos/200/150"
+
+    alt="Event Image"
+
+    ondblclick="enlargeImage()">
+
+</div>
+
+
+<script>
+
+function validatePhone() {
+
+    let phone = document.getElementById("phone").value;
+
+    if(phone.length == 10) {
+
+        document.getElementById("phoneMsg").innerHTML =
+        "Valid Phone Number";
+
+    }
+
+    else {
+
+        document.getElementById("phoneMsg").innerHTML =
+        "Enter a valid 10 digit number";
+    }
+}
+
+
+function showFee() {
+
+    let fee = document.getElementById("event").value;
+
+    document.getElementById("fee").innerHTML =
+    "Event Fee : ₹" + fee;
+}
+
+
+function submitForm() {
+
+    alert("Feedback Submitted Successfully!");
+}
+
+
+function enlargeImage() {
+
+    let img = document.getElementById("eventImg");
+
+    img.style.width = "350px";
+
+    img.style.height = "250px";
+}
+
+
+function countCharacters() {
+
+    let text = document.getElementById("feedback").value;
+
+    document.getElementById("charCount").innerHTML =
+
+    "Characters: " + text.length;
+}
+
+</script>
+
+</body>
+
+</html>

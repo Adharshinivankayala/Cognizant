@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Saving User Preferences</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background-color: #f2f2f2;
+        }
+
+        .container {
+
+            width: 400px;
+
+            margin: 50px auto;
+
+            background-color: white;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 0 10px gray;
+
+            text-align: center;
+        }
+
+        h1 {
+
+            color: #007BFF;
+        }
+
+        select {
+
+            width: 100%;
+
+            padding: 10px;
+
+            margin: 20px 0;
+        }
+
+        button {
+
+            padding: 10px 20px;
+
+            background-color: #007BFF;
+
+            color: white;
+
+            border: none;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+            margin: 10px;
+        }
+
+        button:hover {
+
+            background-color: #0056b3;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>User Preferences</h1>
+
+    <label>Select Preferred Event</label>
+
+    <select id="eventType">
+
+        <option value="">Choose Event</option>
+
+        <option value="Music Festival">
+            Music Festival
+        </option>
+
+        <option value="Food Fair">
+            Food Fair
+        </option>
+
+        <option value="Art Exhibition">
+            Art Exhibition
+        </option>
+
+        <option value="Community Meeting">
+            Community Meeting
+        </option>
+
+    </select>
+
+    <br>
+
+    <button onclick="savePreference()">
+
+        Save Preference
+
+    </button>
+
+    <button onclick="clearPreferences()">
+
+        Clear Preferences
+
+    </button>
+
+</div>
+
+
+<script>
+
+/* Retrieve saved value on page load */
+
+window.onload = function() {
+
+    let savedEvent = localStorage.getItem("preferredEvent");
+
+    if(savedEvent) {
+
+        document.getElementById("eventType").value = savedEvent;
+    }
+};
+
+
+/* Save in localStorage */
+
+function savePreference() {
+
+    let event = document.getElementById("eventType").value;
+
+    localStorage.setItem("preferredEvent", event);
+
+    sessionStorage.setItem("currentEvent", event);
+
+    alert("Preference Saved Successfully!");
+}
+
+
+/* Clear localStorage and sessionStorage */
+
+function clearPreferences() {
+
+    localStorage.clear();
+
+    sessionStorage.clear();
+
+    document.getElementById("eventType").value = "";
+
+    alert("Preferences Cleared!");
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Video Invite with Media Events</title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background-color: #f2f2f2;
+
+            text-align: center;
+        }
+
+        .container {
+
+            width: 600px;
+
+            margin: 40px auto;
+
+            background-color: white;
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            box-shadow: 0 0 10px gray;
+        }
+
+        video {
+
+            border: 3px solid #007BFF;
+
+            border-radius: 10px;
+        }
+
+        #status {
+
+            color: green;
+
+            font-weight: bold;
+
+            margin-top: 15px;
+        }
+
+        input {
+
+            width: 80%;
+
+            padding: 10px;
+
+            margin-top: 20px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Community Event Promo Video</h1>
+
+    <video
+
+    width="500"
+
+    controls
+
+    oncanplay="videoReady()">
+
+        <source src="event.mp4" type="video/mp4">
+
+        Your browser does not support video.
+
+    </video>
+
+    <p id="status"></p>
+
+    <br>
+
+    <input
+
+    type="text"
+
+    id="name"
+
+    placeholder="Enter your name">
+
+</div>
+
+
+<script>
+
+function videoReady() {
+
+    document.getElementById("status").innerHTML =
+
+    "Video ready to play";
+}
+
+
+/* Warn user before leaving page */
+
+window.onbeforeunload = function () {
+
+    let name = document.getElementById("name").value;
+
+    if(name != "") {
+
+        return "You have unsaved changes.";
+
+    }
+
+};
+
+</script>
+
+</body>
+
+</html>
