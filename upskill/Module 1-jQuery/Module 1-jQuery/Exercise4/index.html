@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Manipulation - Exercise 4</title>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        input{
+            padding: 8px;
+            width: 250px;
+        }
+
+        button{
+            padding: 8px 15px;
+            margin: 5px;
+        }
+
+        ul{
+            margin-top: 20px;
+        }
+
+        li{
+            padding: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Todo List</h2>
+
+    <input type="text" id="itemInput" placeholder="Enter an item">
+
+    <button id="addBtn">Submit</button>
+
+    <button id="removeBtn">Remove All</button>
+
+    <ul id="itemList"></ul>
+
+    <script>
+        $(document).ready(function(){
+
+            $("#addBtn").click(function(){
+
+                let value = $("#itemInput").val();
+
+                if(value !== ""){
+
+                    let newItem = $("<li></li>").text(value);
+
+                    $("#itemList").append(newItem);
+
+                    $("#itemInput").val("");
+                }
+
+            });
+
+            $("#removeBtn").click(function(){
+
+                $("#itemList").empty();
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>
