@@ -1,0 +1,14 @@
+C:\Users\vanka\OneDrive\Desktop\DSA_Module\FinancialForecast\ProductSearch\bin\Debug\net10.0\ProductSearch.exe
+C:\Users\vanka\OneDrive\Desktop\DSA_Module\FinancialForecast\ProductSearch\bin\Debug\net10.0\ProductSearch.deps.json
+C:\Users\vanka\OneDrive\Desktop\DSA_Module\FinancialForecast\ProductSearch\bin\Debug\net10.0\ProductSearch.runtimeconfig.json
+C:\Users\vanka\OneDrive\Desktop\DSA_Module\FinancialForecast\ProductSearch\bin\Debug\net10.0\ProductSearch.dll
+C:\Users\vanka\OneDrive\Desktop\DSA_Module\FinancialForecast\ProductSearch\bin\Debug\net10.0\ProductSearch.pdb
+C:\Users\vanka\OneDrive\Desktop\DSA_Module\FinancialForecast\ProductSearch\obj\Debug\net10.0\ProductSearch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vanka\OneDrive\Desktop\DSA_Module\FinancialForecast\ProductSearch\obj\Debug\net10.0\ProductSearch.AssemblyInfoInputs.cache
+C:\Users\vanka\OneDrive\Desktop\DSA_Module\FinancialForecast\ProductSearch\obj\Debug\net10.0\ProductSearch.AssemblyInfo.cs
+C:\Users\vanka\OneDrive\Desktop\DSA_Module\FinancialForecast\ProductSearch\obj\Debug\net10.0\ProductSearch.csproj.CoreCompileInputs.cache
+C:\Users\vanka\OneDrive\Desktop\DSA_Module\FinancialForecast\ProductSearch\obj\Debug\net10.0\ProductSearch.dll
+C:\Users\vanka\OneDrive\Desktop\DSA_Module\FinancialForecast\ProductSearch\obj\Debug\net10.0\refint\ProductSearch.dll
+C:\Users\vanka\OneDrive\Desktop\DSA_Module\FinancialForecast\ProductSearch\obj\Debug\net10.0\ProductSearch.pdb
+C:\Users\vanka\OneDrive\Desktop\DSA_Module\FinancialForecast\ProductSearch\obj\Debug\net10.0\ProductSearch.genruntimeconfig.cache
+C:\Users\vanka\OneDrive\Desktop\DSA_Module\FinancialForecast\ProductSearch\obj\Debug\net10.0\ref\ProductSearch.dll
